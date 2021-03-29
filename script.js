@@ -230,7 +230,9 @@ function buttons() {
 	    $('button:submit[id="order"]').click(function(){
 		if(!formInputCheck()){
 			return false;
-            }
+            }else
+      saveDeliveryInfo();
+      return true;
             });
         });
         
@@ -295,5 +297,24 @@ function buttons() {
 
         }
     
+        function saveDeliveryInfo() {
+          localStorage.clear();
+          const inputName = document.getElementById("name");
+          const inputTel = document.getElementById("tel");
+          const inputEmail = document.getElementById("email");
+          const inputAddress = document.getElementById("address");
+  
+          const name = inputName.value;
+          const tel= inputTel.value;
+          const email= inputEmail.value;
+          const address= inputAddress.value;
+  
+          localStorage.setItem("name", name);
+          localStorage.setItem("tel", tel);
+          localStorage.setItem("email", email);
+          localStorage.setItem("address", address);
+        }
+  
+        console.log(localStorage);
         
         });
