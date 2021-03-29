@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <title>Webshop</title>
+
+<!--header-->
+<header style="background-color: rgb(104, 140, 240); margin: 0px auto 10px auto;">
+    <nav>
+        <div style="padding-left:20px; padding-top:20PX ;  ">
+            <h1 style="color:#fff">Webshop</h1>
+        </div>
+        <div class="text-end" style="padding-bottom:20px; padding-right:20px ;">
+        <button id="cartBtn"  class= "btn-square-shadow" :active>Shopping Cart</button>
+        </div>
+    </nav>
+
+    <!--Cart sidan-->
+    <div id="cart" class="cart text-end">
+        <button id="closeBtn"　class= "btn-square-shadow" :active>X Close</button>
+
+        <div class="text-center">
+            <hr>
+            <h2>My cart</h2>
+            <hr>
+        </div>
+        <div class="cart-items text-capitalize my-5">
+            <ul id="list" class="list-group mt-5 list"></ul>
+        </div>
+       
+        
+        <!--Total anount -->
+        <!--<div class="cart-total-container d-flex justify-content-around text-capitalize mt-4">
+            <h5>total</h5>
+            <h5>
+                <strong id="cartTotal" class="font-weight-bold cart-total-price"
+                >0</strong>
+                SEK
+            </h5>
+             
+        </div> -->
+        <!--Total anount end--> 
+
+        <hr>
+        <!--User info -->
+        <div id="uerInfo" class="text-center" style="margin:0 auto">
+            <form action="#" method="post">
+                <h3 class="text-center justify-content-between">Enter delivery details</h3>
+                <br>
+
+            <table class="text-center">
+            <tr valign="middle">
+                <td >Name:</td>
+                <td>    <input type="text" id="name" name="name" required>
+                </td>
+                <td id="name_error" class="error-message error-width">         
+                </td>
+            </tr>
+   
+            <tr valign="middle">
+                <td >Phone:</td>
+                <td>    <input type="tel" id="tel" name="tel" required>
+                </td>
+                <td id="tel_error" class="error-message error-width">
+                </td>
+            </tr>
+                
+            <tr valign="middle">
+                <td >E-mail:</td>
+                <td>   <input type="email" id="email" name="email" required>
+                </td>
+                <td id="email_error" class="error-message error-width">
+                </td> 
+            </tr>
+                
+            <tr valign="middle">
+                <td >Address:</td>
+                <td> <input type="text" id="address" name="address" required>
+                </td>
+                <td  id="address_error" class="error-message error-width">
+                </td>
+            </tr>
+
+            
+    
+
+        <!--Order button-->
+        <tr style="padding-right: 20px; padding-bottom: 20px; ">
+            <td></td>
+            <td></td>
+            <td style="padding-left: 90px">
+            <button id="order" type="submit" formaction="confirm.html" class="btn btn-outline-secondary" >
+           Order</button>
+            </td>
+            </tr>
+
+        </table>
+        <!--Order button end-->
+
+            </form>
+        </div>
+        <!--User info end-->
+
+    </div>
+    <!--cart end-->
+
+</header>
+
+<!--products--> 
+ <div class="container" style="display: grid;">
+    <!--Justera alla kort ska  -->
+     <div id="products"   class="row row-cols-4 w-100 mx-auto justify-content-center" > 
+
+        <!--Produkter ska vara här-->
+
+        <!--Print ut produkter från API 
+        <div class="card card-body col-md-4" style="margin: 5px;" >
+            <img id="itemImg"
+            src="https://picsum.photos/300/300"
+            class="img-thumbnail" style="width: 200px; height: 200px; margin:0 auto;"
+            alt="Dummy Image"
+            />
+            <p id="itemName" class="card-title text-center text-capitalize itemName">Fjällraven Backpack</p>
+            <div id="itemPrice" class="itemPrice" >110.0<span>SEK</span></div>
+            <button id=addToCart class="w-100 btn btn-outline-success addToCart">Add to Your cart</button>
+        </div>
+        
+        <div class="card card-body col-md-4" style="margin: 5px;" >
+            <img
+            src="https://picsum.photos/301/301"
+            class="img-thumbnail" style="width: 200px; height: 200px; margin:0 auto;"
+            alt="Dummy Image"
+            />
+            <p class="card-title text-center text-capitalize itemName">Mens Casual T-Shirts</p>
+            <div class="itemPrice">22.3<span>SEK</span></div>
+            <button class="w-100 btn btn-outline-success addToCart" >Add to Your cart</button>
+        </div>
+
+     </div>
+    -->
+ </div>
+
+<!--Script-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+ <script src="script.js"></script>
+    
+</body>
+</html>
